@@ -1,12 +1,10 @@
 rm(list = ls()) ; gc(reset = T)
 setwd(dirname(rstudioapi::getSourceEditorContext()$path))
 
-source('../Pacote R/0. Funcoes V6.R', encoding = 'UTF-8')
-
 ## Função para baixar os arquivos em pdf dos relatórios da Corregedoria do TJSP para a Primeira Instância
 
 # pacotes -----------------------------------------------------------------
-
+library(tidyverse)
 library(httr)
 library(purrr)
 
