@@ -1,6 +1,5 @@
-#rm(list = ls()) ; gc(reset = T)
-#setwd(dirname(rstudioapi::getSourceEditorContext()$path))
-source('../Pacote R/0. Funcoes V6.R', encoding = 'UTF-8')
+rm(list = ls()) ; gc(reset = T)
+setwd(dirname(rstudioapi::getSourceEditorContext()$path))
 
 # pacotes -----------------------------------------------------------------
 
