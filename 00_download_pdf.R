@@ -41,9 +41,6 @@ download_pdfs <- function(ano_inicio,ano_fim,codigo_unidade_inicial, codigo_unid
 for (i in str_sub(str_remove_all(as.character(seq(as.Date("2022/1/1"), floor_date(Sys.Date(), unit = 'month') - months(2), #REMOVE MÊS ATUAL
                                           'month')),'-'), end = 6)) {
   
-  # print(i)
-  
-  
   download_pdfs(ano_inicio = i,
                 ano_fim = i,
                 codigo_unidade_inicial = 1,
