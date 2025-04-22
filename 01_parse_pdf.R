@@ -50,6 +50,10 @@ processar_pdf <- function(file_path){
                           filter(materia_total %in% materia),
                         
                         arquivo = str_remove(file_path, 'data-raw/'),
+                        
+                        safra = str_extract(caminho, "/[0-9]{6}/"),
+                        safra = str_replace_all(safra, "/", ""),
+                        
                         regex = NA,
                         feitos_tot = NA,
                         
