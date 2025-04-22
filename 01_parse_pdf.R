@@ -596,25 +596,11 @@ processar_pasta_pdfs <- function(pasta_caminho) {
   # Processar cada arquivo PDF e combinar os resultados em um único data frame
   resultados <- map_df(arquivos_pdf, processar_pdf)
   
-  #dicionario <- readxl::read_excel('./TJSP_Produtividade - Dicionário de dados.xlsx')
-  
-  # lista_dados <- list("TJSP_Produtividade" =  resultados,
-  #                     "Dicionário de Dados" = dicionario)
-  
-  # write.xlsx(lista_dados,
-  #            file = paste0(str_sub(pasta_caminho, end = -8), # -8 para retirar a barra contida no caminho
-  #                          "/foros_unidades_feitos_",
-  #                          str_extract(pasta_caminho, '[0-9]+'),
-  #                          ".xlsx"))
-  
   write.xlsx(resultados,
              file = paste0(str_sub(pasta_caminho, end = -8), # -8 para retirar a barra contida no caminho
                            "/foros_unidades_feitos_",
                            str_extract(pasta_caminho, '[0-9]+'),
                            ".xlsx"))
-  
-  #cat("\nPasta", pasta_caminho, "processada!\n")
-  
 }
 
 # UTILIZAÇÃO----
