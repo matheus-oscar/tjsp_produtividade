@@ -1,4 +1,4 @@
-# Web Scraping Produtividade do TJSP
+# Web Scraping Produtividade do TJSP em 1ª Instância
 
 O objetivo desse projeto é extrair e estruturar os dados dos relatórios públicos de produtividade divulgados mensalmente pelo Tribunal de Justiça de São Paulo. Esses dados são disponibilizados em formato PDF, de maneira não estruturada, e foi necessário fazer o web scraping nos milhares de relatórios divulgados. 
 
