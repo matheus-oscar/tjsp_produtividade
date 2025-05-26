@@ -4,7 +4,7 @@ O objetivo desse projeto é extrair e estruturar os dados dos relatórios públi
 
 Os dados do TJSP estão disponíveis nesse [link](https://www.tjsp.jus.br/produtividadeweb/).
 
-O programa baixa todos os PDF's desejados, separando-os por safra (YYYYMM), e depois extrai todas as informações desejadas. Além dos Jupyter Notebooks, foram disponibilizados 2 scripts que replicam essas funcionalidades, mas rodam um app Streamlit e realizam as funções de download e parsing dos arquivos. Cada um gera 1 arquivo csv: um com o log dos downloads para registrar sucessos, falhas e evitar que PDF's já existentes sejam baixados novamente, e outro com um os dados já parseados, contendo as informações de Foro, Unidade, Matéria, Safra, Total de Feitos em Andamento', além do trecho, extraído por regex, de onde essas informações foram extraídas de tabelas dos PDF's.
+O programa baixa todos os PDF's desejados, separando-os por safra (YYYYMM), e depois extrai todas as informações desejadas. Além dos Jupyter Notebooks, foram disponibilizados 2 scripts que replicam essas funcionalidades, mas rodam um app Streamlit e realizam as funções de download e parsing dos arquivos. Cada um gera 1 arquivo csv: um com o log dos downloads para registrar sucessos, falhas e evitar que PDF's já existentes sejam baixados novamente, e outro com os dados já estruturados, contendo as informações de Foro, Unidade, Matéria, Safra, Total de Feitos em Andamento', além do trecho, extraído por regex, de onde essas informações foram extraídas de tabelas dos PDF's.
 
 Para rodar os apps, basta digitar o comando `streamlit run nome_do_app.py`
 
