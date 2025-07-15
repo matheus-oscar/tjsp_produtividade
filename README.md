@@ -6,7 +6,7 @@ Os dados do TJSP estão disponíveis nesse [link](https://www.tjsp.jus.br/produt
 
 O programa baixa todos os PDF's desejados, separando-os por safra (YYYYMM), e depois extrai todas as informações desejadas. Além dos Jupyter Notebooks, foram disponibilizados 2 scripts que replicam essas funcionalidades, mas rodam um app Streamlit e realizam as funções de download e parsing dos arquivos. Cada um gera 1 arquivo csv: um com o log dos downloads para registrar sucessos, falhas e evitar que PDF's já existentes sejam baixados novamente, e outro com os dados já estruturados, contendo as informações de Foro, Unidade, Matéria, Safra, Total de Feitos em Andamento', além do trecho, extraído por regex, de onde essas informações foram extraídas de tabelas dos PDF's.
 
-### **Modos de utilização**
+### ***Modos de utilização***
 
 #### 0. Instalação 
 Crie o ambiente virtual e instale as dependências
