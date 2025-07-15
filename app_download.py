@@ -86,7 +86,7 @@ def download_pdfs_streamlit(safra_inicio, safra_fim, unidade_inicio, unidade_fim
 
                 progresso_total.progress(
                     contagem_total / total_tarefas,
-                    text=f"📊 Baixando... {contagem_total:,}".replace(",", ".") + f"/{total_tarefas:,}".replace(",", ".") + f" ({int((contagem_total / total_tarefas) * 100):,}".replace(",", ".") + "%)"
+                    text=f"Baixando... {contagem_total:,}".replace(",", ".") + f"/{total_tarefas:,}".replace(",", ".") + f" ({int((contagem_total / total_tarefas) * 100):,}".replace(",", ".") + "%)"
                 )
                 progresso_safra.progress(
                     (i + 1) / len(codigos),
@@ -96,7 +96,7 @@ def download_pdfs_streamlit(safra_inicio, safra_fim, unidade_inicio, unidade_fim
             fim_safra = time.time()
             duracao_safra = fim_safra - inicio_safra
             
-            st.info(f"⏱️ Tempo para baixar safra {safra}: {duracao_safra:.1f} segundos")
+            st.info(f"Tempo para baixar safra {safra}: {duracao_safra:.1f} segundos")
 
             gc.collect()
 
@@ -123,7 +123,7 @@ def download_pdfs_streamlit(safra_inicio, safra_fim, unidade_inicio, unidade_fim
     st.info(f"Total de arquivos ignorados (já existiam): {ignorado:,}".replace(",", "."))
     st.info(f"Total de erros durante o download: {erro:,}".replace(",", "."))
 
-    with st.expander("🔍 Detalhes por Safra", expanded=True):
+    with st.expander("Detalhes por Safra", expanded=True):
         logs_por_safra = defaultdict(list)
         for safra, cod, status, msg, datahora in resultados:
             logs_por_safra[safra].append((cod, status, msg, datahora))
@@ -138,8 +138,8 @@ def download_pdfs_streamlit(safra_inicio, safra_fim, unidade_inicio, unidade_fim
         st.markdown("</div>", unsafe_allow_html=True)
 
 # --- INTERFACE STREAMLIT ---
-st.title("📥 Produtividade TJSP v12_0")
-st.markdown("Download dos relatórios de produtividade do TJSP em formato PDF")
+st.title("Produtividade TJSP v12_0")
+st.markdown("Download dos relatórios de produtividade do TJSP em PDF")
 
 with st.form("formulario"):
     safra_inicio = st.text_input("Safra Inicial (YYYYMM)", value="202401")

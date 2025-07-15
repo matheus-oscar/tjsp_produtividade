@@ -120,9 +120,9 @@ def processar_pdfs_em_lote(pasta_base, max_threads=None):
         return pd.DataFrame()
 
 # --- Interface Streamlit ---
-st.title("🔍 Leitor de PDFs do TJSP por Safra")
+st.title("🔍 Parsing de PDFs de Produtividade TJSP")
 
-pasta = st.text_input("Caminho da pasta base (com subpastas por safra):", "relatorios_app12")
+pasta = st.text_input("Caminho da pasta base (com subpastas por safra):", "data-raw")
 threads = st.slider("Número de threads para paralelismo:", 1, 10, value=5)
 
 if st.button("📁 Processar PDFs"):

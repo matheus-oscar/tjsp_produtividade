@@ -13,6 +13,7 @@ __pycache__/
 
 *.json
 
+data-raw/
 DOCS_DOC/
 DOCS_DIR/
 
